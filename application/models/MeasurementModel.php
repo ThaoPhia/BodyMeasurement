@@ -68,7 +68,9 @@ class MeasurementModel extends CI_Model{
             //If no patient is selected, then show all measurements by this account patients 
             if(empty($filters["patient_id"]) || !is_numeric($filters["patient_id"])){
                 $pids=$this->getPatientIds($accountId);
-                $filterAry[]="m.patient_id IN(".implode(",",$pids).")";
+                if(count($pids)>0){
+                    $filterAry[]="m.patient_id IN(".implode(",",$pids).")";
+                }                
             }
         } 
         return $filterAry;

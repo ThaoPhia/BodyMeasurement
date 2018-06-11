@@ -12,7 +12,7 @@
             {{p.full_name}}, {{p.gender}}, {{p.age}}
         </div> 
     </div>
-    {{status}}
+    <center>{{status}}</center>
 </div>
 
 
@@ -45,7 +45,10 @@
                         });   
                     }, 100);
                 }else{
-                    $scope.status='No patients found!';
+                    $("#loading-area").fadeOut(500);     //Hide loading icon  
+                    $timeout(function() { 
+                        $scope.status='No patients found!';   
+                    }, 700);                    
                 }
             }, function myError(response) {
                 console.log("Error...");
