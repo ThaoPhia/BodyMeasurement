@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 11, 2018 at 12:34 PM
+-- Generation Time: Jun 11, 2018 at 12:41 PM
 -- Server version: 5.5.47-0+deb8u1
 -- PHP Version: 7.1.11-1
 
@@ -134,6 +134,19 @@ CREATE TABLE `patients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Dumping data for table `patients`
+--
+
+INSERT INTO `patients` (`id`, `date_created`, `account_id`, `full_name`, `age`, `gender`) VALUES
+(1, '2018-06-09 04:12:46', 2, 'Joe Jack', 21, 'M'),
+(2, '2018-06-09 04:12:46', 2, 'Mark Johnson', 27, 'M'),
+(3, '2018-06-09 04:12:46', 2, 'Susan Nelson', 38, 'F'),
+(4, '2018-06-09 04:12:46', 2, 'Pam West', 18, 'F'),
+(5, '2018-06-09 23:14:21', 2, 'Lisa Pens', 35, 'F'),
+(6, '2018-06-09 23:14:21', 2, 'Ken Juniors', 55, 'M'),
+(12, '2018-06-11 05:14:08', 2, 'Phia Thao', 34, 'M');
+
+--
 -- Triggers `patients`
 --
 DELIMITER $$
@@ -197,7 +210,7 @@ ALTER TABLE `measurements`
 -- AUTO_INCREMENT for table `patients`
 --
 ALTER TABLE `patients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- Constraints for dumped tables
 --
