@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 11, 2018 at 12:03 PM
+-- Generation Time: Jun 11, 2018 at 12:34 PM
 -- Server version: 5.5.47-0+deb8u1
 -- PHP Version: 7.1.11-1
 
@@ -44,8 +44,8 @@ CREATE TABLE `accounts` (
 
 INSERT INTO `accounts` (`id`, `date_created`, `last_login`, `active`, `fname`, `mname`, `lname`, `email`, `password`) VALUES
 (2, '2018-06-11 06:39:37', NULL, 1, 'Phia', NULL, 'Thao', 'pthao08@alumni.uwosh.edu', '90903fab7235c78f6530a6055f50badc'),
-(3, '2018-06-11 05:11:11', NULL, 1, 'Amanda', NULL, 'Syrjamaki', 'amandas@micoley.com', 'e99a18c428cb38d5f260853678922e03'),
-(4, '2018-06-11 05:12:04', NULL, 1, 'Nico', NULL, 'Mengual', 'nicomengual@gmail.com', 'e99a18c428cb38d5f260853678922e03');
+(3, '2018-06-11 05:11:11', NULL, 1, 'Amanda', NULL, 'Syrjamaki', 'amandas@micoley.com', 'a906449d5769fa7361d7ecc6aa3f6d28'),
+(4, '2018-06-11 05:12:04', NULL, 1, 'Nico', NULL, 'Mengual', 'nicomengual@gmail.com', 'a906449d5769fa7361d7ecc6aa3f6d28');
 
 --
 -- Triggers `accounts`
@@ -72,6 +72,13 @@ CREATE TABLE `keys` (
   `ip_addresses` text,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `keys`
+--
+
+INSERT INTO `keys` (`id`, `key`, `level`, `ignore_limits`, `is_private_key`, `ip_addresses`, `date_created`) VALUES
+(1, 'PhiaThao123', 0, 0, 0, NULL, '2018-06-11 17:34:35');
 
 -- --------------------------------------------------------
 
@@ -180,7 +187,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `keys`
 --
 ALTER TABLE `keys`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `measurements`
 --
